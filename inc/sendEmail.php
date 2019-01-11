@@ -1,7 +1,7 @@
 ﻿	<?php
 
 	// Replace this with your own email address
-	$siteOwnersEmail = 'info@klino.cl';
+	$siteOwnersEmail = 'info@klino.cl, contacto@klino.cl';
 
 
 	if($_POST) {
@@ -25,7 +25,8 @@
 		}
 		// Subject
 		if ($subject == '') { 					$subject = "Formulario de contacto"; 					}
-		// Set Message		$message = null;
+		// Set Message		
+		$message = null;
 		$message .= "De: " . $name . "<br />";
 		$message .= "Correo electrónico: " . $email . "<br />";
 		$message .= "Mensaje: <br />";
@@ -34,8 +35,6 @@
 
 		// Set From: header
 		$from =  $name . " <" . $email . ">";
-
-		// Email Headers
 		$headers = "From: " . $from . "\r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
 		$headers .= "MIME-Version: 1.0\r\n";
@@ -47,7 +46,7 @@
 			ini_set("sendmail_from", $siteOwnersEmail); // for windows server
 			$mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
-			if ($mail) { echo "OK"; }
+			if ($mail) { echo "El mensaje ha sido enviado con éxito"; }
 			else { echo "Algo anduvo mal. Por favor inténtalo más tarde."; }
 			
 		} # end if - no validation error
