@@ -69,6 +69,31 @@ html {
     }
 }
 
+.mi-iframe {
+  width: 800px;
+  height: 250px;
+}
+
+/* CSS pantallas de 320px o superior */
+@media (min-width: 320px) {
+
+  .mi-iframe {
+    width: 250px;
+    height: 100px;
+  } 
+
+}
+
+/* CSS pantalla 768px o superior */
+@media (min-width: 768px) {
+
+  .mi-iframe {
+    width: 600px;
+    height: 200px;
+  } 
+
+}
+
 html, body {
     height: 100%;
 }
