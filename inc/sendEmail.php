@@ -1,7 +1,7 @@
 ﻿	<?php
 
 	// Replace this with your own email address
-	$siteOwnersEmail = 'info@klino.cl, contacto@klino.cl';
+	$siteOwnersEmail = 'contacto@multiklin.cl';
 
 
 	if($_POST) {
